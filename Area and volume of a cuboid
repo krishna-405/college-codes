@@ -1,0 +1,14 @@
+#include <stdio.h>
+int main()
+{
+    int a, b, c;
+    printf("Enter the dimensions of a cuboid :\n");
+    scanf("%d %d %d", &a, &b, &c);
+    int area, vol;
+    area = 2*((a*b)+(b*c)+(c*a));
+    vol = a*b*c;
+    printf("The area of cuboid : %d\n", area);
+    printf("The volume of a cuboid : %d", vol);
+
+    return 0;
+}
