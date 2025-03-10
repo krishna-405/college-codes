@@ -1,0 +1,26 @@
+#include <stdio.h>
+int main()
+{
+    int a;
+    printf("Salary : ");
+    scanf("%d",&a);
+
+    if(a<=100000)
+    {
+        printf("No tax\n");
+    }
+    else if(a>100000 && a<=1000000)
+    {
+        float b;
+        b = (a/100)*10;
+        printf("10% Tax : %.1f", b);
+    }
+    else
+    {
+        float c;
+        c = (a/100)*25;
+        printf("25% Tax : %.1f", c);
+    }
+    
+    return 0;
+}
