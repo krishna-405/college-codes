@@ -1,0 +1,46 @@
+#include <stdio.h>
+struct Students
+{
+    int roll;
+    char name[100];
+    char country[100];
+    float marks;
+};
+int main()
+{
+    struct Students stu[] = {
+        {1, "Priyal", "India", 123},
+        {2, "Krishna", "India", 124},
+        {3, "Akshita", "India", 125},
+        {4, "Khushi", "USA", 130} ,
+        {5, "Bharat", "India",135},
+        {6, "Guddo", "India",137},
+        {7, "Eda", "Italy",156},
+        {8, "Sarkan", "Italy",178},
+        {9, "Xaio San", "China",146},
+        {10, "Xaio Wu", "China",167}
+    };
+    int rolll, found=0;
+    struct Students *ptr=stu;
+    printf("Enter the number : ");
+    scanf("%d", &rolll);
+    for(int i=0; i<sizeof(stu)/sizeof(stu[0]); i++)
+    {
+        if(ptr->roll==rolll)
+        {
+            printf("\nStudent details:\n");
+            printf("Roll No: %d\n", ptr->roll);
+            printf("Name: %s\n", ptr->name);
+            printf("Country: %s\n", ptr->country);
+            printf("Marks: %.1f\n", ptr->marks);
+            found=1;
+            break;
+        }
+        ptr++;
+    }
+    if (!found) {
+        printf("Student with roll number %d not found.\n", rolll);
+    }
+
+    return 0;
+}
