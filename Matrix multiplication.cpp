@@ -26,14 +26,10 @@ int main()
     {
         for(int j=0; j<col; j++)
         {
-            if(i==j)
-            {
-                mul[i][j] = a[i][j] * b[i][j];
-                // printf("%d\n", mul[i][j]);
-            }
+            mul[i][j] = a[i][j] * b[i][j];
         }
     }
-    printf("Scalar multiplication of two matrix :\n");
+    printf("Multiplication of two matrix :\n");
     for(int i=0; i<row; i++)
     {
         for(int j=0; j<col; j++)
